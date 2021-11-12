@@ -24,4 +24,9 @@ git status
 8.  
 git commit -m "Muudatuste sõnaline  kirjeldus"
 
-9. 
+9. Punkti 9-10 teeme ainult 1 kord. Loome repo githubis ja see on aadressiga git@githbu.com@kasutaja ja edasi on repo nimi.git. 
+
+10. Loo remote ühendus githubi ja repoga.   
+
+11. Seda me teeme korduvalt iIga commit pärast.
+git push -uf ühenduse nimi master
