@@ -1,32 +1,43 @@
-1. Kui Giti ei ole, siis paigaldame
-dpkg --list | grep git
-apt-get install git
+1. Kui git ei ole paigaldatud - paigalda
+su root
+apt install git
+exit
 
-2. konfigureeri oma kasutaja alt
-git config --global
-git fongig --email
+2. Konfigureeri oma kasutaja alt
+git config --global user.name "OmaEes Perenimi"
+git config --global user.email omameil@khk.ee
+git config --global core.editor nano
 
 3. Loo kaust, mille failid vajavad jälgimist
 mkdir skriptimine
 
-4. Mine antud kausta sisse
-cd skripitimine
+4. Sisene antud kataloogi
+cd skriptimine
 
-5. Tee lokaalne git repo kaustas muudatuste jälgimiseks
+5. Tee lokaalne git repo antud kaustas muudatuste jälgimiseks
 git init
 
-6. Kui me teeme failis muudatused, siis me lisame faili jälgimisele.
-git add git_kasutamine
+--- 6-8. punktid teeme koduvalt iga muudatuse tekkimisel ---
 
-7. Kui me tahame kontrollida kas fail on jälgimisel, siis kirjutame
+6. Kui failis on tehtud muudatused - lisame fail jälgimisele
+git add failinimi [ failinimi2 failinimiN]
+
+7. Eelmise tegevuse kontrollimiseks võib vaadata faili jälgimisstaatust
 git status
 
-8.  
-git commit -m "Muudatuste sõnaline  kirjeldus"
+8. Koosta jälgitavale failile commit - muudatuse kirjelduse
+git commit -m "muudatuse sõneline kirjeldus"
 
-9. Punkti 9-10 teeme ainult 1 kord. Loome repo githubis ja see on aadressiga git@githbu.com@kasutaja ja edasi on repo nimi.git. 
+--- 9-10 remote - teeme üks kord, et tekitada repo ja ühendus ---
+ 
+9. loo repo githubis - git@github.com:kasutaja/reponimi.git
 
-10. Loo remote ühendus githubi ja repoga.   
+10. loo remote ühendus githubi repoga
+git remote add ühendusenimi git@github.com:kasutaja/reponimi.git
 
-11. Seda me teeme korduvalt iIga commit pärast.
-git push -uf ühenduse nimi master
+git remote -v
+
+--- 11 remote - teeme korduvalt iga commit sooritamise pärast ---
+
+11. Lükka lokaalsed muudatused githubi
+git push -uf ühendusenimi master
