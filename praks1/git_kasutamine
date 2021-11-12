@@ -15,3 +15,13 @@ cd skripitimine
 5. Tee lokaalne git repo kaustas muudatuste jälgimiseks
 git init
 
+6. Kui me teeme failis muudatused, siis me lisame faili jälgimisele.
+git add git_kasutamine
+
+7. Kui me tahame kontrollida kas fail on jälgimisel, siis kirjutame
+git status
+
+8.  
+git commit -m "Muudatuste sõnaline  kirjeldus"
+
+9. 
