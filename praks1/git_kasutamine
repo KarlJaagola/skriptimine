@@ -1,0 +1,17 @@
+1. Kui Giti ei ole, siis paigaldame
+dpkg --list | grep git
+apt-get install git
+
+2. konfigureeri oma kasutaja alt
+git config --global
+git fongig --email
+
+3. Loo kaust, mille failid vajavad jälgimist
+mkdir skriptimine
+
+4. Mine antud kausta sisse
+cd skripitimine
+
+5. Tee lokaalne git repo kaustas muudatuste jälgimiseks
+git init
+
