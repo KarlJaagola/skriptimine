@@ -1,0 +1,9 @@
+#!/bin/bash
+# kuupäev ja kella väljastamine
+
+date +"Todays is %A, %B %d, %Y"
+echo
+date +"%H:%M"
+echo
+echo -n "Calendar"
+cal
